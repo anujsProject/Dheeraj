@@ -39,7 +39,7 @@ for (let i = 0; i < images.length; i++) {
 const nextImg = () => {
   let newIndex = Number(modalImg.dataset.prevImgId.split("-")[1]) + 1;
 
-  if (newIndex >= 50) newIndex = 0;
+  if (newIndex >= 51) newIndex = 0;
   modalImg.src = imagesSrc[newIndex];
 
   modalImg.dataset.prevImgId = images[newIndex].id;
@@ -50,7 +50,7 @@ const prevImg = () => {
 
   console.log(newIndex);
 
-  if (newIndex < 0) newIndex = 49;
+  if (newIndex < 0) newIndex = 51;
   modalImg.src = imagesSrc[newIndex];
 
   modalImg.dataset.prevImgId = images[newIndex].id;
